@@ -12,15 +12,20 @@ namespace YoutubeLogin
 {
     public partial class YoutubeLogin : Form
     {
+        private YoutubeClient mYoutubeClient;
+
         public YoutubeLogin()
         {
             InitializeComponent();
+
+            mYoutubeClient = new YoutubeClient(webBrowser);
         }
 
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            webBrowser.Url = new System.Uri("http://www.swhite523.com/");
+            mYoutubeClient.Login();
         }
+
     }
 }

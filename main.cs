@@ -26,6 +26,5 @@ namespace YoutubeLogin
         {
             mYoutubeClient.Login();
         }
-
     }
 }
